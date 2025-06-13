@@ -350,6 +350,31 @@ main {
   font-size: 0.875rem;
 }
 
+/* Footer Map */
+.footer-map {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.footer-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .footer-map {
+    height: 400px;
+  }
+}
+
 /* Utility Classes */
 .container {
   width: 100%;

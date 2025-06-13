@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MacBook Pro 14" - Oxyphone</title>
+    <title>MacBook Pro - Oxyphone</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
   </head>
-  <body class="bg-white text-black font-sans">
+  <body>
     <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <nav class="max-w-7xl mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <a href="/" class="text-xl md:text-2xl font-bold tracking-wider">Oxyphone</a>
+    <header class="header">
+      <nav class="nav-container">
+        <div class="nav-content">
+          <a href="/" class="logo">Oxyphone</a>
           
           <!-- Desktop Menu -->
-          <ul class="hidden md:flex space-x-8 text-sm">
-            <li><a href="/" class="hover:text-gray-700">Home</a></li>
-            <li><a href="/#products" class="hover:text-gray-700">Products</a></li>
-            <li><a href="/#about" class="hover:text-gray-700">About</a></li>
-            <li><a href="/#contact" class="hover:text-gray-700">Contact</a></li>
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="link-hover">Home</a></li>
+            <li><a href="/#products" class="link-hover">Products</a></li>
+            <li><a href="/#about" class="link-hover">About</a></li>
+            <li><a href="/#contact" class="link-hover">Contact</a></li>
           </ul>
 
           <button
@@ -29,7 +30,7 @@
           </button>
 
           <!-- Hamburger Button -->
-          <button id="menu-btn" class="hamburger md:hidden focus:outline-none">
+          <button id="menu-btn" class="hamburger md:hidden">
             <span class="hamburger-top"></span>
             <span class="hamburger-middle"></span>
             <span class="hamburger-bottom"></span>
@@ -37,20 +38,17 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 pt-24 px-6 flex flex-col">
+        <div id="mobile-menu" class="mobile-menu">
           <div class="flex-1">
-            <ul class="flex flex-col space-y-8 text-lg">
-              <li><a href="/" class="block text-xl font-medium hover:text-gray-600">Home</a></li>
-              <li><a href="/#products" class="block text-xl font-medium hover:text-gray-600">Products</a></li>
-              <li><a href="/#about" class="block text-xl font-medium hover:text-gray-600">About</a></li>
-              <li><a href="/#contact" class="block text-xl font-medium hover:text-gray-600">Contact</a></li>
+            <ul class="flex flex-col space-y-8">
+              <li><a href="/" class="block text-xl font-medium link-hover">Home</a></li>
+              <li><a href="/#products" class="block text-xl font-medium link-hover">Products</a></li>
+              <li><a href="/#about" class="block text-xl font-medium link-hover">About</a></li>
+              <li><a href="/#contact" class="block text-xl font-medium link-hover">Contact</a></li>
             </ul>
           </div>
           <div class="pb-8">
-            <button
-              aria-label="Panier"
-              class="w-full p-4 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center space-x-3 text-lg font-medium"
-            >
+            <button class="btn btn-outline">
               <span>🛒</span>
               <span>Panier</span>
             </button>
@@ -60,44 +58,40 @@
     </header>
 
     <!-- Product Details -->
-    <main class="max-w-7xl mx-auto px-4 py-8 md:py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+    <main class="container">
+      <div class="product-detail">
         <!-- Product Images -->
         <div class="space-y-4">
-          <div class="aspect-square bg-gray-50 rounded-xl p-8">
+          <div class="product-gallery-main">
             <img
-              src="https://www.mymac.dz/wp-content/uploads/2024/05/mbp14-spacegray-select-202310.jpg"
-              alt="MacBook Pro 14 pouces"
-              class="w-full h-full object-contain"
+              src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671304673229"
+              alt="MacBook Pro"
+              id="main-image"
             />
           </div>
-          <div class="grid grid-cols-4 gap-4">
-            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+          <div class="product-gallery">
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
               <img
-                src="https://www.mymac.dz/wp-content/uploads/2024/05/mbp14-spacegray-select-202310.jpg"
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671304673229"
                 alt="MacBook Pro Vue 1"
-                class="w-full h-full object-contain"
               />
             </button>
-            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
               <img
-                src="https://www.apple.com/v/macbook-pro-14-and-16/e/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg"
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-gallery1-202301?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1670625077511"
                 alt="MacBook Pro Vue 2"
-                class="w-full h-full object-contain"
               />
             </button>
-            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
               <img
-                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202310_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697311054290"
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-gallery2-202301?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1670625077675"
                 alt="MacBook Pro Vue 3"
-                class="w-full h-full object-contain"
               />
             </button>
-            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
               <img
-                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp-spacegray-select-202206_GEO_US?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1664497359225"
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-gallery3-202301?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1670625077675"
                 alt="MacBook Pro Vue 4"
-                class="w-full h-full object-contain"
               />
             </button>
           </div>
@@ -106,37 +100,40 @@
         <!-- Product Info -->
         <div class="space-y-6">
           <div>
-            <h1 class="text-3xl font-bold mb-2">MacBook Pro 14"</h1>
-            <p class="text-2xl font-semibold text-gray-900">339 900 DA</p>
+            <h1 class="text-3xl font-bold mb-2">MacBook Pro</h1>
+            <p class="text-price">339 900 DA</p>
           </div>
 
           <div class="space-y-4">
             <h2 class="text-xl font-semibold">Description</h2>
             <p class="text-gray-600">
-              Le MacBook Pro 14 pouces redéfinit la performance professionnelle. Équipé de la puce M3 Pro, 
-              il offre une puissance exceptionnelle pour les tâches les plus exigeantes. Son écran Liquid Retina XDR 
-              offre une qualité d'image incomparable avec une luminosité maximale de 1600 nits.
+              Le MacBook Pro redéfinit la puissance portable. Équipé de la puce M2 Pro, il offre des 
+              performances exceptionnelles pour les professionnels créatifs. Son écran Liquid Retina XDR 
+              offre une qualité d'image incomparable, tandis que sa batterie longue durée vous permet 
+              de travailler toute la journée.
             </p>
           </div>
 
           <div class="space-y-4">
             <h2 class="text-xl font-semibold">Caractéristiques</h2>
             <ul class="space-y-2 text-gray-600">
-              <li>• Puce Apple M3 Pro</li>
-              <li>• Écran Liquid Retina XDR de 14 pouces</li>
+              <li>• Puce Apple M2 Pro avec CPU 10 cœurs et GPU 16 cœurs</li>
               <li>• 16 Go de mémoire unifiée</li>
-              <li>• SSD de 512 Go</li>
-              <li>• Jusqu'à 18 heures d'autonomie</li>
-              <li>• Système de six haut-parleurs</li>
-              <li>• Touch ID</li>
+              <li>• SSD 512 Go</li>
+              <li>• Écran Liquid Retina XDR de 14 pouces</li>
+              <li>• Trois ports Thunderbolt 4, port HDMI, lecteur de carte SDXC</li>
+              <li>• Magic Keyboard rétroéclairé avec Touch ID</li>
+              <li>• Trackpad Force Touch</li>
+              <li>• Adaptateur secteur USB-C 67 W</li>
             </ul>
           </div>
 
           <div class="space-y-4">
-            <button class="w-full bg-black text-white py-4 rounded-full hover:bg-gray-800 transition-colors">
-              Ajouter au panier
+            <button class="btn btn-primary">
+              <span>🛒</span>
+              <span>Ajouter au panier</span>
             </button>
-            <button class="w-full border-2 border-black py-4 rounded-full hover:bg-gray-50 transition-colors">
+            <button class="btn btn-outline">
               Acheter maintenant
             </button>
           </div>
@@ -145,22 +142,33 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black text-white mt-12">
-      <div class="max-w-7xl mx-auto px-4 py-8 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
-          <p class="text-sm md:text-base mb-2">Téléphone : +213 123 456 789</p>
-          <p class="text-sm md:text-base mb-2">Email : support@oxyphone.com</p>
-          <p class="text-sm md:text-base">Adresse : 123 Rue Didouche Mourad, Alger, Algérie</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.5533624169365!2d3.0478843!3d36.7538175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb2ffa165ea89%3A0x9e66b0f4a3bf9a!2sRue%20Didouche%20Mourad%2C%20Alger!5e0!3m2!1sfr!2sdz!4v1710105835611!5m2!1sfr!2sdz"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="footer-content">
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+            <p class="mb-2">Téléphone : +213 123 456 789</p>
+            <p class="mb-2">Email : support@oxyphone.com</p>
+            <p>Adresse : 123 Rue Didouche Mourad, Alger, Algérie</p>
+          </div>
         </div>
       </div>
-      <div class="text-center py-4 border-t border-gray-800 text-xs md:text-sm">
+      <div class="footer-bottom">
         &copy; 2025 Oxyphone. Tous droits réservés.
       </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
+    <!-- Scripts -->
     <script>
+      // Mobile menu toggle
       const btn = document.getElementById('menu-btn');
       const menu = document.getElementById('mobile-menu');
       const body = document.body;
@@ -170,6 +178,13 @@
         menu.classList.toggle('active');
         body.classList.toggle('menu-open');
       });
+
+      // Image gallery functionality
+      function updateMainImage(thumbnail) {
+        const mainImage = document.getElementById('main-image');
+        mainImage.src = thumbnail.querySelector('img').src;
+        mainImage.alt = thumbnail.querySelector('img').alt;
+      }
     </script>
   </body>
 </html> 
