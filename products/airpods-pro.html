@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirPods Pro - Oxyphone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-black font-sans">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+      <nav class="max-w-7xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="text-xl md:text-2xl font-bold tracking-wider">Oxyphone</a>
+          
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex space-x-8 text-sm">
+            <li><a href="/" class="hover:text-gray-700">Home</a></li>
+            <li><a href="/#products" class="hover:text-gray-700">Products</a></li>
+            <li><a href="/#about" class="hover:text-gray-700">About</a></li>
+            <li><a href="/#contact" class="hover:text-gray-700">Contact</a></li>
+          </ul>
+
+          <button
+            aria-label="Panier"
+            class="hidden md:block p-2 rounded-full border border-black hover:bg-black hover:text-white transition-colors"
+          >
+            🛒
+          </button>
+
+          <!-- Hamburger Button -->
+          <button id="menu-btn" class="hamburger md:hidden focus:outline-none">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 pt-24 px-6 flex flex-col">
+          <div class="flex-1">
+            <ul class="flex flex-col space-y-8 text-lg">
+              <li><a href="/" class="block text-xl font-medium hover:text-gray-600">Home</a></li>
+              <li><a href="/#products" class="block text-xl font-medium hover:text-gray-600">Products</a></li>
+              <li><a href="/#about" class="block text-xl font-medium hover:text-gray-600">About</a></li>
+              <li><a href="/#contact" class="block text-xl font-medium hover:text-gray-600">Contact</a></li>
+            </ul>
+          </div>
+          <div class="pb-8">
+            <button
+              aria-label="Panier"
+              class="w-full p-4 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center space-x-3 text-lg font-medium"
+            >
+              <span>🛒</span>
+              <span>Panier</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Product Details -->
+    <main class="max-w-7xl mx-auto px-4 py-8 md:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Product Images -->
+        <div class="space-y-4">
+          <div class="aspect-square bg-gray-50 rounded-xl p-8">
+            <img
+              src="https://sadekphone.com/wp-content/uploads/2024/06/Apple-AirPods-Pro-2nd-Generation.jpeg"
+              alt="AirPods Pro"
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <div class="grid grid-cols-4 gap-4">
+            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+              <img
+                src="https://sadekphone.com/wp-content/uploads/2024/06/Apple-AirPods-Pro-2nd-Generation.jpeg"
+                alt="AirPods Pro Vue 1"
+                class="w-full h-full object-contain"
+              />
+            </button>
+            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1660803972361"
+                alt="AirPods Pro Vue 2"
+                class="w-full h-full object-contain"
+              />
+            </button>
+            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1694014871985"
+                alt="AirPods Pro Vue 3"
+                class="w-full h-full object-contain"
+              />
+            </button>
+            <button class="aspect-square bg-gray-50 rounded-lg p-2 hover:ring-2 ring-black transition-all">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-2nd-gen-hero-202309?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1694767792122"
+                alt="AirPods Pro Vue 4"
+                class="w-full h-full object-contain"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="space-y-6">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">AirPods Pro</h1>
+            <p class="text-2xl font-semibold text-gray-900">44 900 DA</p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-xl font-semibold">Description</h2>
+            <p class="text-gray-600">
+              Les AirPods Pro redéfinissent l'expérience audio sans fil. Avec leur réduction active du bruit, 
+              leur mode Transparence adaptatif et leur audio spatial personnalisé, ils offrent une immersion sonore 
+              incomparable. Le boîtier de charge MagSafe assure une autonomie prolongée pour une journée entière d'écoute.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-xl font-semibold">Caractéristiques</h2>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Réduction active du bruit</li>
+              <li>• Mode Transparence adaptatif</li>
+              <li>• Audio spatial personnalisé</li>
+              <li>• Puce H2 pour un son optimal</li>
+              <li>• Résistance à l'eau et à la transpiration (IPX4)</li>
+              <li>• Jusqu'à 6 heures d'écoute</li>
+              <li>• Boîtier de charge MagSafe</li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <button class="w-full bg-black text-white py-4 rounded-full hover:bg-gray-800 transition-colors">
+              Ajouter au panier
+            </button>
+            <button class="w-full border-2 border-black py-4 rounded-full hover:bg-gray-50 transition-colors">
+              Acheter maintenant
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white mt-12">
+      <div class="max-w-7xl mx-auto px-4 py-8 md:py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+          <p class="text-sm md:text-base mb-2">Téléphone : +213 123 456 789</p>
+          <p class="text-sm md:text-base mb-2">Email : support@oxyphone.com</p>
+          <p class="text-sm md:text-base">Adresse : 123 Rue Didouche Mourad, Alger, Algérie</p>
+        </div>
+      </div>
+      <div class="text-center py-4 border-t border-gray-800 text-xs md:text-sm">
+        &copy; 2025 Oxyphone. Tous droits réservés.
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const body = document.body;
+
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        menu.classList.toggle('active');
+        body.classList.toggle('menu-open');
+      });
+    </script>
+  </body>
+</html> 

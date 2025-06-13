@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone 15 Pro - Oxyphone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="nav-content">
+          <a href="/" class="logo">Oxyphone</a>
+          
+          <!-- Desktop Menu -->
+          <ul class="hidden md:flex space-x-8">
+            <li><a href="/" class="link-hover">Home</a></li>
+            <li><a href="/#products" class="link-hover">Products</a></li>
+            <li><a href="/#about" class="link-hover">About</a></li>
+            <li><a href="/#contact" class="link-hover">Contact</a></li>
+          </ul>
+
+          <button
+            aria-label="Panier"
+            class="hidden md:block p-2 rounded-full border border-black hover:bg-black hover:text-white transition-colors"
+          >
+            🛒
+          </button>
+
+          <!-- Hamburger Button -->
+          <button id="menu-btn" class="hamburger md:hidden">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+          <div class="flex-1">
+            <ul class="flex flex-col space-y-8">
+              <li><a href="/" class="block text-xl font-medium link-hover">Home</a></li>
+              <li><a href="/#products" class="block text-xl font-medium link-hover">Products</a></li>
+              <li><a href="/#about" class="block text-xl font-medium link-hover">About</a></li>
+              <li><a href="/#contact" class="block text-xl font-medium link-hover">Contact</a></li>
+            </ul>
+          </div>
+          <div class="pb-8">
+            <button class="btn btn-outline">
+              <span>🛒</span>
+              <span>Panier</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Product Details -->
+    <main class="container">
+      <div class="product-detail">
+        <!-- Product Images -->
+        <div class="space-y-4">
+          <div class="product-gallery-main">
+            <img
+              src="https://dz.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/6535/1.jpg?7197"
+              alt="iPhone 15 Pro"
+              id="main-image"
+            />
+          </div>
+          <div class="product-gallery">
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
+              <img
+                src="https://dz.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/72/6535/1.jpg?7197"
+                alt="iPhone 15 Pro Vue 1"
+              />
+            </button>
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702708"
+                alt="iPhone 15 Pro Vue 2"
+              />
+            </button>
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium_AV1?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845706590"
+                alt="iPhone 15 Pro Vue 3"
+              />
+            </button>
+            <button class="gallery-thumbnail" onclick="updateMainImage(this)">
+              <img
+                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium_AV2?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845706590"
+                alt="iPhone 15 Pro Vue 4"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="space-y-6">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">iPhone 15 Pro</h1>
+            <p class="text-price">199 900 DA</p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-xl font-semibold">Description</h2>
+            <p class="text-gray-600">
+              L'iPhone 15 Pro représente une révolution en matière de technologie mobile. Avec son design en titane, 
+              sa puce A17 Pro et son système photo professionnel, il repousse les limites de ce qu'un smartphone peut faire. 
+              Son écran Super Retina XDR avec ProMotion offre une expérience visuelle incomparable.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-xl font-semibold">Caractéristiques</h2>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Puce A17 Pro avec GPU 6 cœurs</li>
+              <li>• Écran Super Retina XDR de 6,1 pouces</li>
+              <li>• Triple appareil photo Pro (48MP, 12MP, 12MP)</li>
+              <li>• Design en titane de qualité aérospatiale</li>
+              <li>• Port USB-C avec USB 3</li>
+              <li>• Face ID</li>
+              <li>• iOS 17</li>
+            </ul>
+          </div>
+
+          <div class="space-y-4">
+            <button class="btn btn-primary">
+              <span>🛒</span>
+              <span>Ajouter au panier</span>
+            </button>
+            <button class="btn btn-outline">
+              Acheter maintenant
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold mb-4">Contact</h3>
+          <p class="mb-2">Téléphone : +213 123 456 789</p>
+          <p class="mb-2">Email : support@oxyphone.com</p>
+          <p>Adresse : 123 Rue Didouche Mourad, Alger, Algérie</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Oxyphone. Tous droits réservés.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const body = document.body;
+
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        menu.classList.toggle('active');
+        body.classList.toggle('menu-open');
+      });
+
+      // Image gallery functionality
+      function updateMainImage(thumbnail) {
+        const mainImage = document.getElementById('main-image');
+        mainImage.src = thumbnail.querySelector('img').src;
+        mainImage.alt = thumbnail.querySelector('img').alt;
+      }
+    </script>
+  </body>
+</html> 
